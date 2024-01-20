@@ -1,0 +1,13 @@
+package com.orive.Orive_Website_Apigateway;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OriveWebsiteApigatewayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OriveWebsiteApigatewayApplication.class, args);
+	}
+
+}

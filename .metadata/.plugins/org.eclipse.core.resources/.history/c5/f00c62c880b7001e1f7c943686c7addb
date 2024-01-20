@@ -1,0 +1,85 @@
+package com.orivesolutions.hrms.interviewscheduler.mapper;
+
+import com.orivesolutions.hrms.interviewscheduler.domain.Candidate;
+import com.orivesolutions.hrms.interviewscheduler.domain.Candidate.CandidateBuilder;
+import com.orivesolutions.hrms.interviewscheduler.dto.CandidateDto;
+import com.orivesolutions.hrms.interviewscheduler.dto.CandidateDto.CandidateDtoBuilder;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.springframework.stereotype.Component;
+
+/*
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2024-01-19T13:40:47+0530",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.35.0.v20230814-2020, environment: Java 17.0.8.1 (Eclipse Adoptium)"
+)
+*/
+@Component
+public class CandidateMapperImpl implements CandidateMapper {
+
+    @Override
+    public CandidateDto toCandidateDto(Candidate candidate) {
+        if ( candidate == null ) {
+            return null;
+        }
+
+        CandidateDtoBuilder candidateDto = CandidateDto.builder();
+
+        candidateDto.address( candidate.getAddress() );
+        candidateDto.ctc( candidate.getCtc() );
+        candidateDto.ectc( candidate.getEctc() );
+        candidateDto.email( candidate.getEmail() );
+        candidateDto.id( candidate.getId() );
+        candidateDto.location( candidate.getLocation() );
+        candidateDto.mobile( candidate.getMobile() );
+        candidateDto.name( candidate.getName() );
+        candidateDto.notice( candidate.getNotice() );
+        byte[] resumeUrl = candidate.getResumeUrl();
+        if ( resumeUrl != null ) {
+            candidateDto.resumeUrl( Arrays.copyOf( resumeUrl, resumeUrl.length ) );
+        }
+
+        return candidateDto.build();
+    }
+
+    @Override
+    public Candidate toCandidate(CandidateDto candidateDto) {
+        if ( candidateDto == null ) {
+            return null;
+        }
+
+        CandidateBuilder candidate = Candidate.builder();
+
+        candidate.address( candidateDto.getAddress() );
+        candidate.ctc( candidateDto.getCtc() );
+        candidate.ectc( candidateDto.getEctc() );
+        candidate.email( candidateDto.getEmail() );
+        candidate.id( candidateDto.getId() );
+        candidate.location( candidateDto.getLocation() );
+        candidate.mobile( candidateDto.getMobile() );
+        candidate.name( candidateDto.getName() );
+        candidate.notice( candidateDto.getNotice() );
+        byte[] resumeUrl = candidateDto.getResumeUrl();
+        if ( resumeUrl != null ) {
+            candidate.resumeUrl( Arrays.copyOf( resumeUrl, resumeUrl.length ) );
+        }
+
+        return candidate.build();
+    }
+
+    @Override
+    public List<CandidateDto> toCandidateDtoList(List<Candidate> candidates) {
+        if ( candidates == null ) {
+            return null;
+        }
+
+        List<CandidateDto> list = new ArrayList<CandidateDto>( candidates.size() );
+        for ( Candidate candidate : candidates ) {
+            list.add( toCandidateDto( candidate ) );
+        }
+
+        return list;
+    }
+}

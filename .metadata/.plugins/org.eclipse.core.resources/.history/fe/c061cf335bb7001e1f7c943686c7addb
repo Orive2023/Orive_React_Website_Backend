@@ -1,0 +1,7 @@
+package com.orive.orive_website.Entity;
+
+public class Careers_GetJobAlerts_Entity {
+	
+	private Long careersGetJobAlertsId;
+
+}

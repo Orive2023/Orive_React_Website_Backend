@@ -1,0 +1,20 @@
+package com.orive.orive_website.Entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
+
+public class Careers_GetJobAlerts_Entity {
+	
+	@Id
+	private Long careersGetJobAlertsId;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "jobRole")
+	private String jobRole;
+
+}

@@ -1,0 +1,23 @@
+package com.orive.orive_website.Service;
+
+import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.orive.orive_website.Repository.CareersGetJobAlertsRepository;
+
+
+@Service
+public class CareersGetJobAlertsService {
+	
+  private static final Logger logger = LoggerFactory.getLogger(CareersGetJobAlertsService.class);
+  
+  @Autowired
+  private CareersGetJobAlertsRepository careersGetJobAlertsRepository; 
+  
+  @Autowired
+  private ModelMapper modelMapper;
+
+}

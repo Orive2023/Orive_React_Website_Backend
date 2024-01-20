@@ -1,0 +1,7 @@
+package com.orive.orive_website.Entity;
+
+public class JournalsDetailsEntity {
+	
+	private Long journalsDetailsId;
+
+}

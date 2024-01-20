@@ -1,0 +1,11 @@
+package com.orive.orive_website.Entity;
+
+public class LandingPagePopUpEntity {
+	
+	private Long landingPagePopUpId;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="select_one")
+	private Status selectOne;
+
+}

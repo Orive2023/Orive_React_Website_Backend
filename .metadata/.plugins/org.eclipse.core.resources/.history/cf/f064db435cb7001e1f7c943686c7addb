@@ -1,0 +1,22 @@
+package com.orive.orive_website.DTO;
+
+import com.orive.orive_website.Entity.Careers_GetJobAlerts_Entity;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+public class Careers_GetJobAlerts_Dto {
+
+}

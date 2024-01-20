@@ -1,0 +1,5 @@
+package com.orive.orive_website.DTO;
+
+public class ReachUsDto {
+
+}

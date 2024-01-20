@@ -1,0 +1,8 @@
+package com.orive.orive_website.Controller;
+
+@RestController
+@RequestMapping(value = "careersgetjobAlerts")
+@CrossOrigin(origins = "*")
+public class CareersGetJobAlertsController {
+
+}

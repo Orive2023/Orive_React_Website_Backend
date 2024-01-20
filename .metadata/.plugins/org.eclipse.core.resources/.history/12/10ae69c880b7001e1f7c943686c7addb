@@ -1,0 +1,88 @@
+package com.orivesolutions.hrms.interviewscheduler.mapper;
+
+import com.orivesolutions.hrms.interviewscheduler.domain.Talent;
+import com.orivesolutions.hrms.interviewscheduler.dto.TalentDto;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.stereotype.Component;
+
+/*
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2024-01-19T13:40:47+0530",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.35.0.v20230814-2020, environment: Java 17.0.8.1 (Eclipse Adoptium)"
+)
+*/
+@Component
+public class TalentMapperImpl implements TalentMapper {
+
+    @Override
+    public TalentDto toTalentDto(Talent talent) {
+        if ( talent == null ) {
+            return null;
+        }
+
+        TalentDto talentDto = new TalentDto();
+
+        talentDto.setEndDate( talent.getEndDate() );
+        if ( talent.getId() != null ) {
+            talentDto.setId( talent.getId() );
+        }
+        talentDto.setJobLocation( talent.getJobLocation() );
+        talentDto.setManagerName( talent.getManagerName() );
+        talentDto.setName( talent.getName() );
+        talentDto.setProjectName( talent.getProjectName() );
+        talentDto.setRequirements( talent.getRequirements() );
+        talentDto.setStartDate( talent.getStartDate() );
+
+        return talentDto;
+    }
+
+    @Override
+    public Talent toTalent(TalentDto talentDto) {
+        if ( talentDto == null ) {
+            return null;
+        }
+
+        Talent talent = new Talent();
+
+        talent.setEndDate( talentDto.getEndDate() );
+        talent.setId( talentDto.getId() );
+        talent.setJobLocation( talentDto.getJobLocation() );
+        talent.setManagerName( talentDto.getManagerName() );
+        talent.setName( talentDto.getName() );
+        talent.setProjectName( talentDto.getProjectName() );
+        talent.setRequirements( talentDto.getRequirements() );
+        talent.setStartDate( talentDto.getStartDate() );
+
+        return talent;
+    }
+
+    @Override
+    public List<Talent> toTalents(List<TalentDto> talentDtos) {
+        if ( talentDtos == null ) {
+            return null;
+        }
+
+        List<Talent> list = new ArrayList<Talent>( talentDtos.size() );
+        for ( TalentDto talentDto : talentDtos ) {
+            list.add( toTalent( talentDto ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<TalentDto> toTalentDtos(List<Talent> talens) {
+        if ( talens == null ) {
+            return null;
+        }
+
+        List<TalentDto> list = new ArrayList<TalentDto>( talens.size() );
+        for ( Talent talent : talens ) {
+            list.add( toTalentDto( talent ) );
+        }
+
+        return list;
+    }
+}

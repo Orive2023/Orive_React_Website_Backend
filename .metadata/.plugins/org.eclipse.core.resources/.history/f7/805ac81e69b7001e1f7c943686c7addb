@@ -1,0 +1,17 @@
+package com.orive.orive_website.Entity;
+
+public class ReachUsEntity {
+	
+	private Long reachUsId;
+	
+	private String name;
+	
+	private String email;
+	
+	private Long phoneNumber;
+	
+	private String selectService;
+	
+	private String message;
+
+}
