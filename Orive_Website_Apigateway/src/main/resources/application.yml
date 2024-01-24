@@ -9,7 +9,7 @@ spring:
       - id: ORIVEWEBSITE-SERVICE
         uri: lb://ORIVEWEBSITE-SERVICE
         predicates:
-        - Path=/careersgetjobAlerts/**,/journalsdetails/**,/landingpagepopup/**,/reachus/** 
+          - Path=/careersgetjobAlerts/**,/journalsdetails/**,/landingpagepopup/**,/reachus/**
       - id: INTERVIEW-SCHEDULER
         uri: lb://INTERVIEW-SCHEDULER
         predicates:
